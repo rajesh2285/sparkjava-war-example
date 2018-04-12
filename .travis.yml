@@ -14,3 +14,6 @@ deploy:
   password: firstApp
   site: hello-world-app
   skip_cleanup: true
+
+after_deploy:
+-  echo "cp /home/site/repository/target/sparkjava-hello-world-5.0.war /home/site/wwwroot/webapps/"
