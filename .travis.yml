@@ -1,0 +1,16 @@
+language: java
+
+build_script:
+- mvn install
+
+#before_deploy: "git remote set-url https://rajeshmukkapati:firstApp@hello-world-app.scm.azurewebsites.net/hello-world-app.git"
+#before_deploy: "https://rajeshmukkapati:firstApp@hello-world-app.scm.azurewebsites.net/hello-world-app.git"
+
+deploy:
+  provider: azure_web_apps
+  verbose: true
+  skip_cleanup: true
+  username: rajeshmukkapati
+  password: firstApp
+  site: hello-world-app
+  skip_cleanup: true
